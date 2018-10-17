@@ -416,7 +416,7 @@ val submitCommandResponseF: Future[Unit] = async {
 // using matcher
 // Note this and the next two don&#39;t do anything useful
 val onewayCommandResponseF: Future[Unit] = async {
-  val initialResponse: OnewayResponse = await(assemblyComponent.oneway(setupWithTimeoutMatcher))
+  val initialResponse: OnewayResponse = await(assemblyComponent.send(setupWithTimeoutMatcher))
   initialResponse match {
     case accepted: Accepted ⇒
     // do Something
@@ -429,7 +429,7 @@ val onewayCommandResponseF: Future[Unit] = async {
   <dt>Java</dt>
   <dd>
   <pre class="prettyprint"><code class="language-java">CompletableFuture onewayCommandResponseF = hcdCmdService
-        .oneway(setup, timeout)
+        .send(setup, timeout)
         .thenAccept(initialCommandResponse -&gt; {
             if (initialCommandResponse instanceof CommandResponse.Accepted) {
                 //do something
@@ -488,10 +488,10 @@ CompletableFuture&lt;CommandResponse.QueryResponse&gt; queryResponseFuture = hcd
   <dt>Scala</dt>
   <dd>
   <pre class="prettyprint"><code class="language-scala">val setupForSubscribe = Setup(prefix, longRunning, Some(obsId))
-val response          = assemblyCommandService.complete(setupForSubscribe)</code></pre></dd>
+val response          = assemblyCommandService.submitAndComplete(setupForSubscribe)</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-java">CompletableFuture&lt;CommandResponse.SubmitResponse&gt; finalResponseCompletableFuture = hcdCmdService.complete(failureResCommand1, timeout);
+  <pre class="prettyprint"><code class="language-java">CompletableFuture&lt;CommandResponse.SubmitResponse&gt; finalResponseCompletableFuture = hcdCmdService.submitAndComplete(failureResCommand1, timeout);
 CommandResponse.SubmitResponse actualValidationResponse = finalResponseCompletableFuture.get();</code></pre></dd>
 </dl>
 <h3><a href="#onewayandmatch" name="onewayandmatch" class="anchor"><span class="anchor-link"></span></a>onewayAndMatch</h3>
@@ -499,7 +499,7 @@ CommandResponse.SubmitResponse actualValidationResponse = finalResponseCompletab
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-scala">val eventualResponse1: Future[MatchingResponse] = assemblyComponent.onewayAndMatch(setupWithMatcher, demandMatcher)</code></pre></dd>
+  <pre class="prettyprint"><code class="language-scala">val eventualResponse1: Future[MatchingResponse] = assemblyComponent.sendAndMatch(setupWithMatcher, demandMatcher)</code></pre></dd>
   <dt>Java</dt>
   <dd>
   <pre class="prettyprint"><code class="language-java"><br/>// create a DemandMatcher which specifies the desired state to be matched.
@@ -512,7 +512,7 @@ Matcher matcher1 = new Matcher(AkkaLocationExt.RichAkkaLocation(hcdLocation).com
 CompletableFuture&lt;MatcherResponse&gt; matcherResponse = matcher1.jStart();
 
 CompletableFuture&lt;CommandResponse.MatchingResponse&gt; matchedCommandResponse =
-        hcdCmdService.onewayAndMatch(setup, stateMatcher, timeout);
+        hcdCmdService.sendAndMatch(setup, stateMatcher, timeout);
 </code></pre></dd>
 </dl>
 <h3><a href="#submitallandgetresponse" name="submitallandgetresponse" class="anchor"><span class="anchor-link"></span></a>submitAllAndGetResponse</h3>
@@ -595,7 +595,7 @@ val matcherResponseF: Future[MatcherResponse] = matcher.start
 
 // submit command and if the command is successfully validated, check for matching of demand state against current state
 val eventualCommandResponse: Future[MatchingResponse] = async {
-  val initialResponse = await(assemblyComponent.oneway(setupWithMatcher))
+  val initialResponse = await(assemblyComponent.send(setupWithMatcher))
   initialResponse match {
     case _: Accepted ⇒
       val matcherResponse = await(matcherResponseF)
@@ -629,7 +629,7 @@ CompletableFuture&lt;MatcherResponse&gt; matcherResponseFuture = matcher.jStart(
 
 // submit command and if the command is successfully validated, check for matching of demand state against current state
 CompletableFuture&lt;CommandResponse.MatchingResponse&gt; commandResponseToBeMatched = hcdCmdService
-        .oneway(setup, timeout)
+        .send(setup, timeout)
         .thenCompose(initialCommandResponse -&gt; {
             if (initialCommandResponse instanceof CommandResponse.Accepted) {
 

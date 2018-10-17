@@ -220,82 +220,7 @@
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="csw.command.api.javadsl.ICommandService#complete" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="complete(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.SubmitResponse]"></a><a id="complete(ControlCommand,Timeout):CompletableFuture[SubmitResponse]"></a>
-      <span class="permalink">
-      <a href="../../../../csw/command/api/javadsl/ICommandService.html#complete(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.SubmitResponse]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">complete</span><span class="params">(<span name="controlCommand">controlCommand: <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a></span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">SubmitResponse</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Submit a command and Subscribe for the result if it was successfully validated as <code>Started</code> to get a
-final <a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">csw.params.commands.CommandResponse.SubmitResponse</a> as a Future
-</p><div class="fullcomment"><div class="comment cmt"><p>Submit a command and Subscribe for the result if it was successfully validated as <code>Started</code> to get a
-final <a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">csw.params.commands.CommandResponse.SubmitResponse</a> as a Future
-</p></div><dl class="paramcmts block"><dt class="param">controlCommand</dt><dd class="cmt"><p>the <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payload</p></dd><dt>returns</dt><dd class="cmt"><p>a CommandResponse as a Future value</p></dd></dl></div>
-    </li><li name="csw.command.api.javadsl.ICommandService#completeAll" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="completeAll(submitCommands:java.util.List[csw.params.commands.ControlCommand],timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[java.util.List[csw.params.commands.CommandResponse.SubmitResponse]]"></a><a id="completeAll(List[ControlCommand],Timeout):CompletableFuture[List[SubmitResponse]]"></a>
-      <span class="permalink">
-      <a href="../../../../csw/command/api/javadsl/ICommandService.html#completeAll(submitCommands:java.util.List[csw.params.commands.ControlCommand],timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[java.util.List[csw.params.commands.CommandResponse.SubmitResponse]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">completeAll</span><span class="params">(<span name="submitCommands">submitCommands: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html#java.util.List" class="extype" name="java.util.List">List</a>[<a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a>]</span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html#java.util.List" class="extype" name="java.util.List">List</a>[<a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">SubmitResponse</a>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Submit multiple commands and get a Source of <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> for all commands.</p><div class="fullcomment"><div class="comment cmt"><p>Submit multiple commands and get a Source of <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> for all commands. The CommandResponse can be a response
-of validation (Accepted, Invalid) or a final Response. In case of response as <code>Accepted</code>, final CommandResponse can be obtained by using <code>subscribe</code> API.
-</p></div><dl class="paramcmts block"><dt class="param">submitCommands</dt><dd class="cmt"><p>the set of <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payloads</p></dd><dt>returns</dt><dd class="cmt"><p>a Source of CommandResponse as a stream of CommandResponses for all commands</p></dd></dl></div>
-    </li><li name="csw.command.api.javadsl.ICommandService#oneway" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="oneway(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.OnewayResponse]"></a><a id="oneway(ControlCommand,Timeout):CompletableFuture[OnewayResponse]"></a>
-      <span class="permalink">
-      <a href="../../../../csw/command/api/javadsl/ICommandService.html#oneway(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.OnewayResponse]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">oneway</span><span class="params">(<span name="controlCommand">controlCommand: <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a></span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="../../../params/commands/CommandResponse$$OnewayResponse.html" class="extype" name="csw.params.commands.CommandResponse.OnewayResponse">OnewayResponse</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Send a command as a Oneway and get a <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> as a Future.</p><div class="fullcomment"><div class="comment cmt"><p>Send a command as a Oneway and get a <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> as a Future. The CommandResponse can be a response
-of validation (Accepted, Invalid) or a final Response.
-</p></div><dl class="paramcmts block"><dt class="param">controlCommand</dt><dd class="cmt"><p>the <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payload</p></dd><dt>returns</dt><dd class="cmt"><p>a CommandResponse as a Future value</p></dd></dl></div>
-    </li><li name="csw.command.api.javadsl.ICommandService#onewayAndMatch" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="onewayAndMatch(controlCommand:csw.params.commands.ControlCommand,stateMatcher:csw.command.api.scaladsl.StateMatcher,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.MatchingResponse]"></a><a id="onewayAndMatch(ControlCommand,StateMatcher,Timeout):CompletableFuture[MatchingResponse]"></a>
-      <span class="permalink">
-      <a href="../../../../csw/command/api/javadsl/ICommandService.html#onewayAndMatch(controlCommand:csw.params.commands.ControlCommand,stateMatcher:csw.command.api.scaladsl.StateMatcher,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.MatchingResponse]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">onewayAndMatch</span><span class="params">(<span name="controlCommand">controlCommand: <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a></span>, <span name="stateMatcher">stateMatcher: <a href="../scaladsl/StateMatcher.html" class="extype" name="csw.command.api.scaladsl.StateMatcher">StateMatcher</a></span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="../../../params/commands/CommandResponse$$MatchingResponse.html" class="extype" name="csw.params.commands.CommandResponse.MatchingResponse">MatchingResponse</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Submit a command and match the published state from the component using a <span class="extype" name="StateMatcher">StateMatcher</span>.</p><div class="fullcomment"><div class="comment cmt"><p>Submit a command and match the published state from the component using a <span class="extype" name="StateMatcher">StateMatcher</span>.
-If the match is successful a <code>Completed</code> response is
-provided as a future. In case of a failure or unmatched state, <code>Error</code> CommandResponse is provided as a Future.
-</p></div><dl class="paramcmts block"><dt class="param">controlCommand</dt><dd class="cmt"><p>the <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payload</p></dd><dt class="param">stateMatcher</dt><dd class="cmt"><p>the StateMatcher implementation for matching received state against a demand state</p></dd><dt>returns</dt><dd class="cmt"><p>a MatchingResponse as a Future value</p></dd></dl></div>
-    </li><li name="csw.command.api.javadsl.ICommandService#query" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="csw.command.api.javadsl.ICommandService#query" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="query(commandRunId:csw.params.core.models.Id,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.QueryResponse]"></a><a id="query(Id,Timeout):CompletableFuture[QueryResponse]"></a>
       <span class="permalink">
       <a href="../../../../csw/command/api/javadsl/ICommandService.html#query(commandRunId:csw.params.core.models.Id,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.QueryResponse]" title="Permalink">
@@ -331,6 +256,43 @@ provided as a future. In case of a failure or unmatched state, <code>Error</code
       <p class="shortcomment cmt">Subscribe for the result of a long running command which was sent as Submit to get a <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> as a Future
 </p><div class="fullcomment"><div class="comment cmt"><p>Subscribe for the result of a long running command which was sent as Submit to get a <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> as a Future
 </p></div><dl class="paramcmts block"><dt class="param">commandRunId</dt><dd class="cmt"><p>the runId of the command for which response is required</p></dd><dt>returns</dt><dd class="cmt"><p>a CommandResponse as a Future value</p></dd></dl></div>
+    </li><li name="csw.command.api.javadsl.ICommandService#send" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="send(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.OnewayResponse]"></a><a id="send(ControlCommand,Timeout):CompletableFuture[OnewayResponse]"></a>
+      <span class="permalink">
+      <a href="../../../../csw/command/api/javadsl/ICommandService.html#send(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.OnewayResponse]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">send</span><span class="params">(<span name="controlCommand">controlCommand: <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a></span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="../../../params/commands/CommandResponse$$OnewayResponse.html" class="extype" name="csw.params.commands.CommandResponse.OnewayResponse">OnewayResponse</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Send a command as a Oneway and get a <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> as a Future.</p><div class="fullcomment"><div class="comment cmt"><p>Send a command as a Oneway and get a <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> as a Future. The CommandResponse can be a response
+of validation (Accepted, Invalid) or a final Response.
+</p></div><dl class="paramcmts block"><dt class="param">controlCommand</dt><dd class="cmt"><p>the <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payload</p></dd><dt>returns</dt><dd class="cmt"><p>a CommandResponse as a Future value</p></dd></dl></div>
+    </li><li name="csw.command.api.javadsl.ICommandService#sendAndMatch" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="sendAndMatch(controlCommand:csw.params.commands.ControlCommand,stateMatcher:csw.command.api.StateMatcher,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.MatchingResponse]"></a><a id="sendAndMatch(ControlCommand,StateMatcher,Timeout):CompletableFuture[MatchingResponse]"></a>
+      <span class="permalink">
+      <a href="../../../../csw/command/api/javadsl/ICommandService.html#sendAndMatch(controlCommand:csw.params.commands.ControlCommand,stateMatcher:csw.command.api.StateMatcher,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.MatchingResponse]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendAndMatch</span><span class="params">(<span name="controlCommand">controlCommand: <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a></span>, <span name="stateMatcher">stateMatcher: <a href="../StateMatcher.html" class="extype" name="csw.command.api.StateMatcher">StateMatcher</a></span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="../../../params/commands/CommandResponse$$MatchingResponse.html" class="extype" name="csw.params.commands.CommandResponse.MatchingResponse">MatchingResponse</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Submit a command and match the published state from the component using a <a href="../StateMatcher.html" class="extype" name="csw.command.api.StateMatcher">StateMatcher</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Submit a command and match the published state from the component using a <a href="../StateMatcher.html" class="extype" name="csw.command.api.StateMatcher">StateMatcher</a>.
+If the match is successful a <code>Completed</code> response is
+provided as a future. In case of a failure or unmatched state, <code>Error</code> CommandResponse is provided as a Future.
+</p></div><dl class="paramcmts block"><dt class="param">controlCommand</dt><dd class="cmt"><p>the <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payload</p></dd><dt class="param">stateMatcher</dt><dd class="cmt"><p>the StateMatcher implementation for matching received state against a demand state</p></dd><dt>returns</dt><dd class="cmt"><p>a MatchingResponse as a Future value</p></dd></dl></div>
     </li><li name="csw.command.api.javadsl.ICommandService#submit" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="submit(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.SubmitResponse]"></a><a id="submit(ControlCommand,Timeout):CompletableFuture[SubmitResponse]"></a>
       <span class="permalink">
@@ -350,10 +312,10 @@ provided as a future. In case of a failure or unmatched state, <code>Error</code
 of validation (Accepted, Invalid) or a final Response. In case of response as <code>Accepted</code>, final CommandResponse
 can be obtained by using <code>subscribe</code> API.
 </p></div><dl class="paramcmts block"><dt class="param">controlCommand</dt><dd class="cmt"><p>the <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payload</p></dd><dt>returns</dt><dd class="cmt"><p>a CommandResponse as a Future value</p></dd></dl></div>
-    </li><li name="csw.command.api.javadsl.ICommandService#subscribeCurrentState" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="subscribeCurrentState(names:java.util.Set[csw.params.core.states.StateName],callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.scaladsl.CurrentStateSubscription"></a><a id="subscribeCurrentState(Set[StateName],Consumer[CurrentState]):CurrentStateSubscription"></a>
+    </li><li name="csw.command.api.javadsl.ICommandService#submitAndComplete" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="submitAndComplete(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.SubmitResponse]"></a><a id="submitAndComplete(ControlCommand,Timeout):CompletableFuture[SubmitResponse]"></a>
       <span class="permalink">
-      <a href="../../../../csw/command/api/javadsl/ICommandService.html#subscribeCurrentState(names:java.util.Set[csw.params.core.states.StateName],callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.scaladsl.CurrentStateSubscription" title="Permalink">
+      <a href="../../../../csw/command/api/javadsl/ICommandService.html#submitAndComplete(controlCommand:csw.params.commands.ControlCommand,timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[csw.params.commands.CommandResponse.SubmitResponse]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -362,16 +324,54 @@ can be obtained by using <code>subscribe</code> API.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">subscribeCurrentState</span><span class="params">(<span name="names">names: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html#java.util.Set" class="extype" name="java.util.Set">Set</a>[<a href="../../../params/core/states/StateName.html" class="extype" name="csw.params.core.states.StateName">StateName</a>]</span>, <span name="callback">callback: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html#java.util.function.Consumer" class="extype" name="java.util.function.Consumer">Consumer</a>[<a href="../../../params/core/states/CurrentState.html" class="extype" name="csw.params.core.states.CurrentState">CurrentState</a>]</span>)</span><span class="result">: <a href="../scaladsl/CurrentStateSubscription.html" class="extype" name="csw.command.api.scaladsl.CurrentStateSubscription">CurrentStateSubscription</a></span>
+        <span class="name">submitAndComplete</span><span class="params">(<span name="controlCommand">controlCommand: <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a></span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">SubmitResponse</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Submit a command and Subscribe for the result if it was successfully validated as <code>Started</code> to get a
+final <a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">csw.params.commands.CommandResponse.SubmitResponse</a> as a Future
+</p><div class="fullcomment"><div class="comment cmt"><p>Submit a command and Subscribe for the result if it was successfully validated as <code>Started</code> to get a
+final <a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">csw.params.commands.CommandResponse.SubmitResponse</a> as a Future
+</p></div><dl class="paramcmts block"><dt class="param">controlCommand</dt><dd class="cmt"><p>the <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payload</p></dd><dt>returns</dt><dd class="cmt"><p>a CommandResponse as a Future value</p></dd></dl></div>
+    </li><li name="csw.command.api.javadsl.ICommandService#submitAndCompleteAll" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="submitAndCompleteAll(submitCommands:java.util.List[csw.params.commands.ControlCommand],timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[java.util.List[csw.params.commands.CommandResponse.SubmitResponse]]"></a><a id="submitAndCompleteAll(List[ControlCommand],Timeout):CompletableFuture[List[SubmitResponse]]"></a>
+      <span class="permalink">
+      <a href="../../../../csw/command/api/javadsl/ICommandService.html#submitAndCompleteAll(submitCommands:java.util.List[csw.params.commands.ControlCommand],timeout:akka.util.Timeout):java.util.concurrent.CompletableFuture[java.util.List[csw.params.commands.CommandResponse.SubmitResponse]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">submitAndCompleteAll</span><span class="params">(<span name="submitCommands">submitCommands: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html#java.util.List" class="extype" name="java.util.List">List</a>[<a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">ControlCommand</a>]</span>, <span name="timeout">timeout: <a href="https://oss.sonatype.org/service/local/repositories/public/archive/com/typesafe/akka/akka-actor_2.12/2.5.15/akka-actor_2.12-2.5.15-javadoc.jar/!/akka/util/Timeout.html#akka.util.Timeout" class="extype" name="akka.util.Timeout">Timeout</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html#java.util.concurrent.CompletableFuture" class="extype" name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html#java.util.List" class="extype" name="java.util.List">List</a>[<a href="../../../params/commands/CommandResponse$$SubmitResponse.html" class="extype" name="csw.params.commands.CommandResponse.SubmitResponse">SubmitResponse</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Submit multiple commands and get a Source of <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> for all commands.</p><div class="fullcomment"><div class="comment cmt"><p>Submit multiple commands and get a Source of <a href="../../../params/commands/CommandResponse.html" class="extype" name="csw.params.commands.CommandResponse">csw.params.commands.CommandResponse</a> for all commands. The CommandResponse can be a response
+of validation (Accepted, Invalid) or a final Response. In case of response as <code>Accepted</code>, final CommandResponse can be obtained by using <code>subscribe</code> API.
+</p></div><dl class="paramcmts block"><dt class="param">submitCommands</dt><dd class="cmt"><p>the set of <a href="../../../params/commands/ControlCommand.html" class="extype" name="csw.params.commands.ControlCommand">csw.params.commands.ControlCommand</a> payloads</p></dd><dt>returns</dt><dd class="cmt"><p>a Source of CommandResponse as a stream of CommandResponses for all commands</p></dd></dl></div>
+    </li><li name="csw.command.api.javadsl.ICommandService#subscribeCurrentState" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="subscribeCurrentState(names:java.util.Set[csw.params.core.states.StateName],callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.CurrentStateSubscription"></a><a id="subscribeCurrentState(Set[StateName],Consumer[CurrentState]):CurrentStateSubscription"></a>
+      <span class="permalink">
+      <a href="../../../../csw/command/api/javadsl/ICommandService.html#subscribeCurrentState(names:java.util.Set[csw.params.core.states.StateName],callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.CurrentStateSubscription" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subscribeCurrentState</span><span class="params">(<span name="names">names: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html#java.util.Set" class="extype" name="java.util.Set">Set</a>[<a href="../../../params/core/states/StateName.html" class="extype" name="csw.params.core.states.StateName">StateName</a>]</span>, <span name="callback">callback: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html#java.util.function.Consumer" class="extype" name="java.util.function.Consumer">Consumer</a>[<a href="../../../params/core/states/CurrentState.html" class="extype" name="csw.params.core.states.CurrentState">CurrentState</a>]</span>)</span><span class="result">: <a href="../CurrentStateSubscription.html" class="extype" name="csw.command.api.CurrentStateSubscription">CurrentStateSubscription</a></span>
       </span>
       
       <p class="shortcomment cmt">Subscribe to the current state of a component corresponding to the <a href="../../../location/api/models/AkkaLocation.html" class="extype" name="csw.location.api.models.AkkaLocation">csw.location.api.models.AkkaLocation</a> of the component
 </p><div class="fullcomment"><div class="comment cmt"><p>Subscribe to the current state of a component corresponding to the <a href="../../../location/api/models/AkkaLocation.html" class="extype" name="csw.location.api.models.AkkaLocation">csw.location.api.models.AkkaLocation</a> of the component
 </p></div><dl class="paramcmts block"><dt class="param">names</dt><dd class="cmt"><p>subscribe to only those states which have any of the the provided value for name</p></dd><dt class="param">callback</dt><dd class="cmt"><p>the action to be applied on the CurrentState element received as a result of subscription</p></dd><dt>returns</dt><dd class="cmt"><p>a CurrentStateSubscription to stop the subscription</p></dd></dl></div>
     </li><li name="csw.command.api.javadsl.ICommandService#subscribeCurrentState" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="subscribeCurrentState(callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.scaladsl.CurrentStateSubscription"></a><a id="subscribeCurrentState(Consumer[CurrentState]):CurrentStateSubscription"></a>
+      <a id="subscribeCurrentState(callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.CurrentStateSubscription"></a><a id="subscribeCurrentState(Consumer[CurrentState]):CurrentStateSubscription"></a>
       <span class="permalink">
-      <a href="../../../../csw/command/api/javadsl/ICommandService.html#subscribeCurrentState(callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.scaladsl.CurrentStateSubscription" title="Permalink">
+      <a href="../../../../csw/command/api/javadsl/ICommandService.html#subscribeCurrentState(callback:java.util.function.Consumer[csw.params.core.states.CurrentState]):csw.command.api.CurrentStateSubscription" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -380,7 +380,7 @@ can be obtained by using <code>subscribe</code> API.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">subscribeCurrentState</span><span class="params">(<span name="callback">callback: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html#java.util.function.Consumer" class="extype" name="java.util.function.Consumer">Consumer</a>[<a href="../../../params/core/states/CurrentState.html" class="extype" name="csw.params.core.states.CurrentState">CurrentState</a>]</span>)</span><span class="result">: <a href="../scaladsl/CurrentStateSubscription.html" class="extype" name="csw.command.api.scaladsl.CurrentStateSubscription">CurrentStateSubscription</a></span>
+        <span class="name">subscribeCurrentState</span><span class="params">(<span name="callback">callback: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html#java.util.function.Consumer" class="extype" name="java.util.function.Consumer">Consumer</a>[<a href="../../../params/core/states/CurrentState.html" class="extype" name="csw.params.core.states.CurrentState">CurrentState</a>]</span>)</span><span class="result">: <a href="../CurrentStateSubscription.html" class="extype" name="csw.command.api.CurrentStateSubscription">CurrentStateSubscription</a></span>
       </span>
       
       <p class="shortcomment cmt">Subscribe to the current state of a component corresponding to the <a href="../../../location/api/models/AkkaLocation.html" class="extype" name="csw.location.api.models.AkkaLocation">csw.location.api.models.AkkaLocation</a> of the component

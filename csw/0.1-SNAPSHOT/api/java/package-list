@@ -2,8 +2,13 @@ csw.alarm.api.exceptions
 csw.alarm.api.javadsl
 csw.alarm.api.models
 csw.alarm.client
+csw.command.api
 csw.command.api.javadsl
 csw.command.client
+csw.command.client.extensions
+csw.command.client.messages
+csw.command.client.models.framework
+csw.command.client.models.matchers
 csw.config.api.commons
 csw.config.api.exceptions
 csw.config.api.javadsl
