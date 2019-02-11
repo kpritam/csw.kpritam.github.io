@@ -5,38 +5,40 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="description" content="docs">
-<meta name="generator" content="Paradox, paradox-material-theme=0.4.0, mkdocs-material=2.2.2">
+<meta name="generator" content="Paradox, paradox-material-theme=0.6.0, mkdocs-material=3.0.3">
 
 <meta name="lang:clipboard.copy" content="Copy to clipboard">
 <meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.pipeline.stopwords" content="true">
+<meta name="lang:search.pipeline.trimmer" content="true">
 <meta name="lang:search.result.none" content="No matching documents">
 <meta name="lang:search.result.one" content="1 matching document">
 <meta name="lang:search.result.other" content="# matching documents">
-<meta name="lang:search.language" content="">
 <meta name="lang:search.tokenizer" content="[\s\-]+">
 
 
 <meta name="description" content="docs">
 <link rel="shortcut icon" href="../assets/tmt_favicon.ico">
 <title>Multiple Components · TMT Common Software (CSW)</title>
-<link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
+<link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
 <link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="../lib/prettify/prettify.css">
-<script src="../lib/modernizr/modernizr.min.js"></script>
+<script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
 <style>
 body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
 code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="../assets/fonts/material-icons.css">
 <link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
 </head>
 <body
 >
-<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-<input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-<label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
 <header class="md-header" data-md-component="header">
 <nav class="md-header-nav md-grid">
 <div class="md-flex">
@@ -46,7 +48,7 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 </a>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
-<label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
 </div>
 <div class="md-flex__cell md-flex__cell--stretch">
 <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
@@ -59,14 +61,14 @@ Multiple Components
 </div>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
-<label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
 <div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="search"></label>
-<div class="md-search__inner">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-<label class="md-icon md-search__icon" for="search"></label>
-<button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+<input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+<label class="md-icon md-search__icon" for="__search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button>
 </form>
 <div class="md-search__output">
 <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -110,9 +112,10 @@ tmtsoftware/csw
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
 <label class="md-nav__title md-nav__title--site" for="drawer">
+<a href="../index.html" title="TMT Common Software (CSW)" class="md-nav__button md-logo">
 <span class="md-nav__button md-logo">
 <i class="md-icon">local_library</i>
-</span>
+</a>
 <a href="../index.html" title="TMT Common Software (CSW)">
 TMT Common Software (CSW)
 </a>
@@ -135,6 +138,8 @@ tmtsoftware/csw
   <li><a href="../commons/getting-started.html" class="page">Getting Started</a></li>
   <li><a href="../commons/create-component.html" class="page">Creating a Component</a></li>
   <li><a href="../commons/multiple-components.html" class="active page">Multiple Components</a></li>
+  <li><a href="../commons/using-alarms.html" class="page">Using Alarms</a></li>
+  <li><a href="../commons/unit-tests.html" class="page">Adding Unit Tests</a></li>
   <li><a href="../commons/messages.html" class="page">Messages</a>
   <ul>
     <li><a href="../messages/keys-parameters.html" class="page">Keys and Parameters</a></li>
@@ -164,6 +169,9 @@ tmtsoftware/csw
     <li><a href="../services/logging.html" class="page">Logging Service</a></li>
     <li><a href="../services/event.html" class="page">Event Service</a></li>
     <li><a href="../services/alarm.html" class="page">Alarm Service</a></li>
+    <li><a href="../services/time.html" class="page">Time Service</a></li>
+    <li><a href="../services/database.html" class="page">Database Service</a></li>
+    <li><a href="../services/aas.html" class="page">Authentication and Authorization Service (AAS)</a></li>
   </ul></li>
   <li><a href="../commons/apps.html" class="page">Applications</a>
   <ul>
@@ -181,7 +189,7 @@ tmtsoftware/csw
   <li><a href="../commons/manuals.html" class="page">Manuals</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="toc">Table of contents</label>
+<label class="md-nav__title" for="__toc">Table of contents</label>
 <ul>
   <li><a href="../commons/multiple-components.html#multiple-components" class="header">Multiple Components</a>
   <ul>
@@ -200,11 +208,14 @@ tmtsoftware/csw
 </ul>
 </nav>
 
-<div class="md-nav__title--site md-version" title="Version">
-<i class="md-icon">label_outline</i> 0.1*
-</div>
 </nav>
-
+<ul style="display: none">
+<li class="md-nav__item md-version" id="project.version">
+<label class="md-nav__link" for="__version">
+<i class="md-icon" title="Version">label_outline</i> 0.1*
+</label>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -212,7 +223,7 @@ tmtsoftware/csw
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="toc">Table of contents</label>
+<label class="md-nav__title" for="__toc">Table of contents</label>
 <ul>
   <li><a href="../commons/multiple-components.html#multiple-components" class="header">Multiple Components</a>
   <ul>
@@ -247,7 +258,7 @@ tmtsoftware/csw
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-scala">private var maybeEventSubscription: Option[EventSubscription] = None
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/scala/org/tmt/nfiraos/sampleassembly/SampleAssemblyHandlers.scala#L127-L137" target="_blank" title="Go to snippet source"></a><code class="language-scala">private var maybeEventSubscription: Option[EventSubscription] = None
 override def initialize(): Future[Unit] = {
   log.info(&quot;In Assembly initialize&quot;)
   maybeEventSubscription = Some(subscribeToHcd())
@@ -260,7 +271,7 @@ override def onShutdown(): Future[Unit] = {
 }</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-java">private Optional&lt;IEventSubscription&gt; maybeEventSubscription = Optional.empty();
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/java/org/tmt/nfiraos/sampleassembly/JSampleAssemblyHandlers.java#L156-L168" target="_blank" title="Go to snippet source"></a><code class="language-java">private Optional&lt;IEventSubscription&gt; maybeEventSubscription = Optional.empty();
 @Override
 public CompletableFuture&lt;Void&gt; jInitialize() {
     return CompletableFuture.runAsync(() -&gt; {
@@ -274,7 +285,7 @@ public CompletableFuture&lt;Void&gt; jOnShutdown() {
     return CompletableFuture.runAsync(() -&gt; log.info(&quot;Assembly is shutting down.&quot;));
 }</code></pre></dd>
 </dl>
-<p>Once again, ingore the code about setting up the subscription. This will be covered later when we discuss subscribing to events.</p>
+<p>Once again, ignore the code about setting up the subscription. This will be covered later when we discuss subscribing to events.</p>
 <h2><a href="#component-configuration-componentinfo-" name="component-configuration-componentinfo-" class="anchor"><span class="anchor-link"></span></a>Component Configuration (ComponentInfo)</h2>
 <p>Also similar to the HCD, we will need to create a ComponentInfo file for the Assembly. The following shows an example of ComponentInfo file for an Assembly:</p>
 <dl>
@@ -282,7 +293,7 @@ public CompletableFuture&lt;Void&gt; jOnShutdown() {
   <dd>
   <pre><code>name = &quot;SampleAssembly&quot;
 componentType = assembly
-behaviorFactoryClassName = &quot;nfiraos.sampleassembly.SampleAssemblyBehaviorFactory&quot;
+behaviorFactoryClassName = &quot;org.tmt.nfiraos.sampleassembly.SampleAssemblyBehaviorFactory&quot;
 prefix = &quot;nfiraos.sample&quot;
 locationServiceUsage = RegisterAndTrackServices
 connections = [
@@ -297,7 +308,7 @@ connections = [
   <dd>
   <pre><code>name = &quot;JSampleAssembly&quot;
 componentType = assembly
-behaviorFactoryClassName = &quot;nfiraos.sampleassembly.JSampleAssemblyBehaviorFactory&quot;
+behaviorFactoryClassName = &quot;org.tmt.nfiraos.sampleassembly.JSampleAssemblyBehaviorFactory&quot;
 prefix = &quot;nfiraos.sample&quot;
 locationServiceUsage = RegisterAndTrackServices
 connections = [
@@ -314,12 +325,12 @@ connections = [
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-conf">name = &quot;SampleContainer&quot;
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/resources/SampleContainer.conf" target="_blank" title="Go to snippet source"></a><code class="language-conf">name = &quot;SampleContainer&quot;
 components: [
   {
     name = &quot;SampleAssembly&quot;
     componentType = assembly
-    behaviorFactoryClassName = &quot;nfiraos.sampleassembly.SampleAssemblyBehaviorFactory&quot;
+    behaviorFactoryClassName = &quot;org.tmt.nfiraos.sampleassembly.SampleAssemblyBehaviorFactory&quot;
     prefix = &quot;nfiraos.sample&quot;
     locationServiceUsage = RegisterAndTrackServices
     connections = [
@@ -333,19 +344,19 @@ components: [
   {
     name = &quot;SampleHcd&quot;
     componentType = hcd
-    behaviorFactoryClassName = &quot;nfiraos.samplehcd.SampleHcdBehaviorFactory&quot;
+    behaviorFactoryClassName = &quot;org.tmt.nfiraos.samplehcd.SampleHcdBehaviorFactory&quot;
     prefix = &quot;nfiraos.samplehcd&quot;
     locationServiceUsage = RegisterOnly
   }
 ]</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-conf">name = &quot;JSampleContainer&quot;
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/resources/JSampleContainer.conf" target="_blank" title="Go to snippet source"></a><code class="language-conf">name = &quot;JSampleContainer&quot;
 components: [
   {
     name = &quot;JSampleAssembly&quot;
     componentType = assembly
-    behaviorFactoryClassName = &quot;nfiraos.sampleassembly.JSampleAssemblyBehaviorFactory&quot;
+    behaviorFactoryClassName = &quot;org.tmt.nfiraos.sampleassembly.JSampleAssemblyBehaviorFactory&quot;
     prefix = &quot;nfiraos.sample&quot;
     locationServiceUsage = RegisterAndTrackServices
     connections = [
@@ -359,7 +370,7 @@ components: [
   {
     name = &quot;JSampleHcd&quot;
     componentType = hcd
-    behaviorFactoryClassName = &quot;nfiraos.samplehcd.JSampleHcdBehaviorFactory&quot;
+    behaviorFactoryClassName = &quot;org.tmt.nfiraos.samplehcd.JSampleHcdBehaviorFactory&quot;
     prefix = &quot;nfiraos.samplehcd&quot;
     locationServiceUsage = RegisterOnly
   }
@@ -408,7 +419,7 @@ connectionType: akka
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-scala">override def onLocationTrackingEvent(trackingEvent: TrackingEvent): Unit = {
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/scala/org/tmt/nfiraos/sampleassembly/SampleAssemblyHandlers.scala#L141-L149" target="_blank" title="Go to snippet source"></a><code class="language-scala">override def onLocationTrackingEvent(trackingEvent: TrackingEvent): Unit = {
   log.debug(s&quot;onLocationTrackingEvent called: $trackingEvent&quot;)
   trackingEvent match {
     case LocationUpdated(location) =&gt;
@@ -419,7 +430,7 @@ connectionType: akka
 }</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-java">@Override
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/java/org/tmt/nfiraos/sampleassembly/JSampleAssemblyHandlers.java#L172-L183" target="_blank" title="Go to snippet source"></a><code class="language-java">@Override
 public void onLocationTrackingEvent(TrackingEvent trackingEvent) {
     log.debug(() -&gt; &quot;onLocationTrackingEvent called: &quot; + trackingEvent.toString());
     if (trackingEvent instanceof LocationUpdated) {
@@ -440,7 +451,7 @@ public void onLocationTrackingEvent(TrackingEvent trackingEvent) {
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-scala">implicit val system: ActorSystem[Nothing] = ctx.system
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/scala/example/framework/components/assembly/AssemblyComponentHandlers.scala#L191-L201" target="_blank" title="Go to snippet source"></a><code class="language-scala">implicit val system: ActorSystem[Nothing] = ctx.system
 
 val eventualCommandService: Future[CommandService] =
   cswCtx.locationService.resolve(hcdConnection.of[AkkaLocation], 5.seconds).map {
@@ -453,7 +464,7 @@ eventualCommandService.foreach { commandService ⇒
 }</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-java">CompletableFuture&lt;Optional&lt;AkkaLocation&gt;&gt; resolvedHcdLocation = locationService.resolve(hcdConnection, Duration.ofSeconds(5));
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/java/example/framework/components/assembly/JAssemblyComponentHandlers.java#L329-L338" target="_blank" title="Go to snippet source"></a><code class="language-java">CompletableFuture&lt;Optional&lt;AkkaLocation&gt;&gt; resolvedHcdLocation = locationService.resolve(hcdConnection, Duration.ofSeconds(5));
 
 CompletableFuture&lt;ICommandService&gt; eventualCommandService = resolvedHcdLocation.thenApply((Optional&lt;AkkaLocation&gt; hcdLocation) -&gt; {
     if (hcdLocation.isPresent())
@@ -465,18 +476,14 @@ CompletableFuture&lt;ICommandService&gt; eventualCommandService = resolvedHcdLoc
 eventualCommandService.thenAccept((jcommandService) -&gt; hcd = jcommandService);</code></pre></dd>
 </dl>
 <p>If a component wants to send a command to another component, it uses a <code>CommandService</code> instance. The creation of a<code>CommandService</code> instance and its usage can be found <a href="command.html#commandservice">here</a>.</p>
-<p>If a component wants to send multiple commands in response to a single received command, then it can use a <code>CommandDistributor</code> instance. The CommandDistributor will help in getting the aggregated response of multiple commands sent to other components. The component developer can use the aggregated response to update the <code>CommandResponseManager</code> with the appropriate status if the received command was in a <code>Submit</code> wrapper.</p>
-<p>More details about creating a <code>CommandDistributor</code> instance and its usage can be found <a href="command.html#distributing-commands">here</a>.</p><div class="callout note "><div class="callout-title">Note</div>
-<p><code>CommandDistributor</code> can be used to get an aggregated response only if the multiple commands sent to other components are all wrapped in a <code>Submit</code> wrapper.</p></div>
 <h2><a href="#tracking-long-running-commands" name="tracking-long-running-commands" class="anchor"><span class="anchor-link"></span></a>Tracking Long Running Commands</h2>
-<p>A command sent in a <code>Submit</code> wrapper that receives an <code>Accepted</code> response in return is considered as a long running command.</p>
-<p>When a component sends a long running command to another component, it may be interested in knowing the status of the command and take decisions based on that. In order to subscribe to the changes in command status, the sender component will have to use the <code>subscribe</code> method after <code>submit</code> or use <code>submitAndSubscribe</code> in <code>CommandService</code>.</p>
+<p>The <code>submit</code> method has been written so that it will return a Future response encapsulating a <code>SubmitResponse</code> type. If the Future completes, no matter whether the command has an immediate response or is long-running, is invalid, or encounters an error at any point, the Future completes with the final response. If there is an exception, which may occur if the <code>submit</code> times out, that must be handled explicity using Future exception handling (this can be done many ways; an example is given below).</p>
 <h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><em>Tutorial: Developing an Assembly</em></h4>
 <p>We use our worker actor to submit the command to the HCD, and then subscribe to the HCD&rsquo;s <code>CommandResponseManager</code> for command completion.</p>
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-scala">sealed trait WorkerCommand
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/scala/org/tmt/nfiraos/sampleassembly/SampleAssemblyHandlers.scala#L37-L76" target="_blank" title="Go to snippet source"></a><code class="language-scala">sealed trait WorkerCommand                  extends TMTSerializable
 case class SendCommand(hcd: CommandService) extends WorkerCommand
 
 private val commandSender =
@@ -493,7 +500,8 @@ private val commandSender =
     &quot;CommandSender&quot;
   )
 
-private implicit val submitTimeout: Timeout = Timeout(1000.millis)
+import scala.concurrent.duration._
+private implicit val sleepCommandTimeout: Timeout = Timeout(10000.millis)
 def handle(hcd: CommandService): Unit = {
 
   // Construct Setup command
@@ -501,27 +509,23 @@ def handle(hcd: CommandService): Unit = {
   val sleepTimeParam: Parameter[Long] = sleepTimeKey.set(5000).withUnits(Units.millisecond)
   val setupCommand                    = Setup(componentInfo.prefix, CommandName(&quot;sleep&quot;), Some(ObsId(&quot;2018A-001&quot;))).add(sleepTimeParam)
 
-  // Submit command, and handle validation response. Final response is returned as a Future
-  val submitCommandResponseF: Future[SubmitResponse] = hcd.submit(setupCommand).flatMap {
-    case _: Started =&gt;
-      // If valid, subscribe to the HCD&#39;s CommandResponseManager
-      // This explicit timeout indicates how long to wait for completion
-      hcd.queryFinal(setupCommand.runId)(10000.seconds)
-    case x =&gt;
-      log.error(&quot;Sleep command invalid&quot;)
-      Future(x)
-  }
-
-  // Wait for final response, and log result
-  submitCommandResponseF.foreach {
-    case _: CommandResponse.Completed =&gt; log.info(&quot;Command completed successfully&quot;)
-    case x: CommandResponse.Error     =&gt; log.error(s&quot;Command Completed with error: ${x.message}&quot;)
-    case _                            =&gt; log.error(&quot;Command failed&quot;)
+  // submit command and handle response
+  hcd.submit(setupCommand).onComplete {
+    case scala.util.Success(value) =&gt;
+      value match {
+        case _: CommandResponse.Locked =&gt; log.error(&quot;Sleep command failed: HCD is locked.&quot;)
+        case inv: CommandResponse.Invalid =&gt;
+          log.error(s&quot;Command is invalid: (${inv.issue.getClass.getSimpleName}): ${inv.issue.reason}&quot;)
+        case x: CommandResponse.Error     =&gt; log.error(s&quot;Command Completed with error: ${x.message}&quot;)
+        case _: CommandResponse.Completed =&gt; log.info(&quot;Command completed successfully&quot;)
+        case _                            =&gt; log.error(&quot;Command failed&quot;)
+      }
+    case scala.util.Failure(ex) =&gt; log.error(s&quot;Exception occured when sending command: ${ex.getMessage}&quot;)
   }
 }</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-java">private interface WorkerCommand {
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/java/org/tmt/nfiraos/sampleassembly/JSampleAssemblyHandlers.java#L60-L115" target="_blank" title="Go to snippet source"></a><code class="language-java">private interface WorkerCommand extends TMTSerializable {
 }
 
 private static final class SendCommand implements WorkerCommand {
@@ -554,34 +558,28 @@ private void handle(ICommandService hcd) {
     Key&lt;Long&gt; sleepTimeKey = JKeyType.LongKey().make(&quot;SleepTime&quot;);
     Parameter&lt;Long&gt; sleepTimeParam = sleepTimeKey.set(5000L).withUnits(JUnits.millisecond);
 
-    Setup setupCommand = new Setup(componentInfo.prefix(), new CommandName(&quot;sleep&quot;), Optional.of(new ObsId(&quot;2018A-001&quot;))).add(sleepTimeParam);
+    Setup setupCommand = new Setup(cswCtx.componentInfo().prefix(), new CommandName(&quot;sleep&quot;), Optional.of(new ObsId(&quot;2018A-001&quot;))).add(sleepTimeParam);
 
-    Timeout submitTimeout = new Timeout(1, TimeUnit.SECONDS);
     Timeout commandResponseTimeout = new Timeout(10, TimeUnit.SECONDS);
 
-    // Submit command, and handle validation response. Final response is returned as a Future
-    CompletableFuture&lt;CommandResponse.SubmitResponse&gt; submitCommandResponseF = hcd.submit(setupCommand, submitTimeout)
-            .thenCompose(commandResponse -&gt; {
-                if (commandResponse instanceof CommandResponse.Started) {
-                    return hcd.queryFinal(commandResponse.runId(), commandResponseTimeout);
+    // Submit command and handle response
+    hcd.submit(setupCommand, commandResponseTimeout)
+            .exceptionally(ex -&gt; new CommandResponse.Error(setupCommand.runId(), &quot;Exception occurred when sending command: &quot; + ex.getMessage()))
+            .thenAccept(commandResponse -&gt; {
+                if (commandResponse instanceof CommandResponse.Locked) {
+                    log.error(&quot;Sleed command failed: HCD is locked&quot;);
+                } else if (commandResponse instanceof CommandResponse.Invalid) {
+                    CommandResponse.Invalid inv = (CommandResponse.Invalid) commandResponse;
+                    log.error(&quot;Sleep command invalid (&quot; + inv.issue().getClass().getSimpleName() + &quot;): &quot; + inv.issue().reason());
+                } else if (commandResponse instanceof CommandResponse.Error) {
+                    CommandResponse.Error x = (CommandResponse.Error) commandResponse;
+                    log.error(() -&gt; &quot;Command Completed with error: &quot; + x.message());
+                } else if (commandResponse instanceof CommandResponse.Completed) {
+                    log.info(&quot;Command completed successfully&quot;);
                 } else {
-                    log.error(&quot;Sleep command invalid&quot;);
-                    return CompletableFuture.completedFuture(new CommandResponse.Error(commandResponse.runId(), &quot;test error&quot;));
+                    log.error(&quot;Command failed: &quot;);
                 }
             });
-
-
-    // Wait for final response, and log result
-    submitCommandResponseF.toCompletableFuture().thenAccept(commandResponse -&gt; {
-        if (commandResponse instanceof CommandResponse.Completed) {
-            log.info(&quot;Command completed successfully&quot;);
-        } else if (commandResponse instanceof CommandResponse.Error) {
-            CommandResponse.Error x = (CommandResponse.Error) commandResponse;
-            log.error(() -&gt; &quot;Command Completed with error: &quot; + x.message());
-        } else {
-            log.error(&quot;Command failed&quot;);
-        }
-    });
 }</code></pre></dd>
 </dl><div class="callout note "><div class="callout-title">Note</div>
 <p>If the component developer creates new set of messages for worker actor then it is mandatory that those messages extend <code>TMTSerializable</code> which will enable messages to serialize on wire.</p></div>
@@ -590,7 +588,7 @@ private void handle(ICommandService hcd) {
 <p>More details on how to use <code>Matcher</code> can be found <a href="command.html#matching-state-for-command-completion">here</a>. </p>
 <h2><a href="#pubsub-connection" name="pubsub-connection" class="anchor"><span class="anchor-link"></span></a>PubSub Connection</h2>
 <p>A component might need to subscribe to the current state of any other component provided it knows the location of that component. In order to subscribe to current state, it may use the <code>subscribeCurrentState</code> method of the <code>CommandService</code>. More details about the usage of <code>subscribeCurrentState</code> can ber found <a href="command.html#subscribecurrentstate">here</a>.</p>
-<p>If a component wants to publish its current state then it can use the <code>currentStatePublisher</code> provided by <code>csw-framework</code> in <code>ComponentHandlers</code>. More details about the usage of <code>currentStatePublisher</code> can ber found <a href="../framework/publishing-state.html">here</a>.</p>
+<p>If a component wants to publish its current state then it can use the <code>currentStatePublisher</code> provided by <code>csw-framework</code> in the <code>CswContext</code> object passed into <code>ComponentHandlers</code>. More details about the usage of <code>currentStatePublisher</code> can be found <a href="../framework/publishing-state.html">here</a>.</p>
 <h2><a href="#subscribing-to-events" name="subscribing-to-events" class="anchor"><span class="anchor-link"></span></a>Subscribing to Events</h2>
 <p>To subscribe to events, a subscriber is accessed done in a similar way to publishing. Typically a <code>defaultSubscriber</code> is obtained, but additional subscribers with their own connection can be created.</p>
 <p>The subscribe API specifies a set of <code>Events</code> to subscribe to and then specifies how the events should be handled. This can be a callback, an Actor reference to receive the <code>Event</code> as a message, or as a stream to allow flow operations to be applied. </p>
@@ -599,7 +597,7 @@ private void handle(ICommandService hcd) {
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-scala">private val counterEventKey = EventKey(Prefix(&quot;nfiraos.samplehcd&quot;), EventName(&quot;HcdCounter&quot;))
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/scala/org/tmt/nfiraos/sampleassembly/SampleAssemblyHandlers.scala#L153-L178" target="_blank" title="Go to snippet source"></a><code class="language-scala">private val counterEventKey = EventKey(Prefix(&quot;nfiraos.samplehcd&quot;), EventName(&quot;HcdCounter&quot;))
 private val hcdCounterKey   = KeyType.IntKey.make(&quot;counter&quot;)
 
 private def processEvent(event: Event): Unit = {
@@ -607,8 +605,10 @@ private def processEvent(event: Event): Unit = {
   event match {
     case e: SystemEvent =&gt;
       e.eventKey match {
-        case `counterEventKey` =&gt; log.info(s&quot;Counter = ${e(hcdCounterKey).head}&quot;)
-        case _                 =&gt; log.warn(&quot;Unexpected event received.&quot;)
+        case `counterEventKey` =&gt;
+          val counter = e(hcdCounterKey).head
+          log.info(s&quot;Counter = $counter&quot;)
+        case _ =&gt; log.warn(&quot;Unexpected event received.&quot;)
       }
     case e: ObserveEvent =&gt; log.warn(&quot;Unexpected ObserveEvent received.&quot;) // not expected
   }
@@ -625,7 +625,7 @@ private def unsubscribeHcd(): Unit = {
 }</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-java">private EventKey counterEventKey = new EventKey(new Prefix(&quot;nfiraos.samplehcd&quot;), new EventName(&quot;HcdCounter&quot;));
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/java/org/tmt/nfiraos/sampleassembly/JSampleAssemblyHandlers.java#L187-L214" target="_blank" title="Go to snippet source"></a><code class="language-java">private EventKey counterEventKey = new EventKey(new Prefix(&quot;nfiraos.samplehcd&quot;), new EventName(&quot;HcdCounter&quot;));
 private Key&lt;Integer&gt; hcdCounterKey = JKeyType.IntKey().make(&quot;counter&quot;);
 
 private void processEvent(Event event) {
@@ -633,7 +633,8 @@ private void processEvent(Event event) {
     if (event instanceof SystemEvent) {
         SystemEvent sysEvent = (SystemEvent)event;
         if (event.eventKey().equals(counterEventKey)) {
-            log.info(&quot;Counter = &quot; + sysEvent.parameter(hcdCounterKey).head());
+            int counter = sysEvent.parameter(hcdCounterKey).head();
+            log.info(&quot;Counter = &quot; + counter);
         } else {
             log.warn(&quot;Unexpected event received.&quot;);
         }
@@ -645,7 +646,7 @@ private void processEvent(Event event) {
 
 private IEventSubscription subscribeToHcd() {
     log.info(&quot;Starting subscription.&quot;);
-    return eventService.defaultSubscriber().subscribeCallback(Collections.singleton(counterEventKey), this::processEvent);
+    return cswCtx.eventService().defaultSubscriber().subscribeCallback(Collections.singleton(counterEventKey), this::processEvent);
 }
 
 private void unsubscribeHcd() {
@@ -653,13 +654,12 @@ private void unsubscribeHcd() {
     maybeEventSubscription.ifPresent(IEventSubscription::unsubscribe);
 }</code></pre></dd>
 </dl>
-<p>Again, in Java, you must save a reference to the <code>IEventService</code> passed into the constructor as a member variable. We use the name <code>eventService</code> (not shown here).</p>
 <p>We use the <code>subscribeCallback</code> method from the API and specify the method <code>processEvent</code> as our callback, in which we unpack the event and log the counter value. The subscribe methods in the API return a <code>EventSubscription</code> object, which can be used to stop the subscription, as demonstrated in the <code>unsubscribeHCD</code> method (which again, is not called in our tutorial).</p>
 <p>Again, we return to our <code>initialize</code> method to show how subscription is started, and the reference to the subscription is stored for later use.</p>
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-scala">private var maybeEventSubscription: Option[EventSubscription] = None
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/scala/org/tmt/nfiraos/sampleassembly/SampleAssemblyHandlers.scala#L127-L137" target="_blank" title="Go to snippet source"></a><code class="language-scala">private var maybeEventSubscription: Option[EventSubscription] = None
 override def initialize(): Future[Unit] = {
   log.info(&quot;In Assembly initialize&quot;)
   maybeEventSubscription = Some(subscribeToHcd())
@@ -672,7 +672,7 @@ override def onShutdown(): Future[Unit] = {
 }</code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre class="prettyprint"><code class="language-java">private Optional&lt;IEventSubscription&gt; maybeEventSubscription = Optional.empty();
+  <pre class="prettyprint"><a class="icon go-to-source" href="https://github.com/tmtsoftware/csw/tree/master/examples/src/main/java/org/tmt/nfiraos/sampleassembly/JSampleAssemblyHandlers.java#L156-L168" target="_blank" title="Go to snippet source"></a><code class="language-java">private Optional&lt;IEventSubscription&gt; maybeEventSubscription = Optional.empty();
 @Override
 public CompletableFuture&lt;Void&gt; jInitialize() {
     return CompletableFuture.runAsync(() -&gt; {
@@ -694,18 +694,18 @@ public CompletableFuture&lt;Void&gt; jOnShutdown() {
 <p>Go to the project root directory and type <code>sbt &quot;&lt;deploy-module&gt;/runMain &lt;mainClass&gt; --local &lt;path-to-config-file&gt;&quot;</code>, where</p>
 <ul>
   <li><code>&lt;deploy-module&gt;</code> is the name of the deployment module created by the template (<code>sample-deploy</code> if using defaults)</li>
-  <li><code>&lt;mainClass&gt;</code> is the full class name of our ContainerCmd application, which the template names <code>&lt;prefix&gt;.&lt;name&gt;deploy.&lt;Name&gt;ContainerCmdApp</code>. If you accept the defaults for the template, it will be <code>nfiraos.sampledeploy.SampleContainerCmdApp</code>. If you are having problems determining the class name, use <code>sbt run</code> and it will prompt you the possibilities.</li>
+  <li><code>&lt;mainClass&gt;</code> is the full class name of our ContainerCmd application, which the template names <code>&lt;package&gt;.&lt;name&gt;deploy.&lt;Name&gt;ContainerCmdApp</code>. If you accept the defaults for the template, it will be <code>org.tmt.nfiraos.sampledeploy.SampleContainerCmdApp</code>. If you are having problems determining the class name, use <code>sbt &lt;deploy-module&gt;/run</code> and it will prompt you the possibilities.</li>
   <li><code>&lt;path-to-config-file&gt;</code> is the filename, which can be an absolute path or relative to the directory of the deployment module. If using defaults, this would be <code>src/main/resources/SampleContainer.conf</code> for Scala, and <code>src/main/resources/JSampleContainer.conf</code> for Java.</li>
 </ul>
 <p>So if using the template defaults, the full command would be </p>
 <dl>
   <dt>Scala</dt>
   <dd>
-  <pre><code>sbt &quot;sample-deploy/runMain nfiraos.sampledeploy.SampleContainerCmdApp --local src/main/resources/SampleContainer.conf&quot;
+  <pre><code>sbt &quot;sample-deploy/runMain org.tmt.nfiraos.sampledeploy.SampleContainerCmdApp --local src/main/resources/SampleContainer.conf&quot;
 </code></pre></dd>
   <dt>Java</dt>
   <dd>
-  <pre><code>sbt &quot;sample-deploy/runMain nfiraos.sampledeploy.SampleContainerCmdApp --local src/main/resources/JSampleContainer.conf&quot;
+  <pre><code>sbt &quot;sample-deploy/runMain org.tmt.nfiraos.sampledeploy.SampleContainerCmdApp --local src/main/resources/JSampleContainer.conf&quot;
 </code></pre></dd>
 </dl>
 <p>Like with the HCD, the <code>sbt stage</code> command can also be used to create binaries in the <code>target/universal/stage/bin</code> directories of the root project.</p>
@@ -719,7 +719,7 @@ public CompletableFuture&lt;Void&gt; jOnShutdown() {
   <li>Example to run container: <code>./sample-container-cmd-app --local ../../../../sample-deploy/src/main/resources/SampleContainer.conf</code></li>
   <li>Example to run host config: <code>./sample-host-config-app --local ../../../../sample-deploy/src/main/resources/SampleHostConfig.conf -s ./sample-container-cmd-app</code></li>
 </ul><div class="callout note "><div class="callout-title">Note</div>
-<p>The CSW HTTP Location server must be running and appropriate environment variables set to run the apps. See <a href="../apps/cswlocationserver.html">CSW Location Server</a>.</p></div>
+<p>This assumes you still have the CSW Services running using the <code>csw-services.sh</code> script as described in the <a href="create-component.html#starting-csw-services">Create a Component</a> tutorial page.</p></div>
 </div>
 <div>
 <a href="https://github.com/tmtsoftware/csw/tree/master/docs/src/main/commons/multiple-components.md" title="Edit this page" class="md-source-file md-edit">
@@ -751,13 +751,13 @@ Creating a Component
 </span>
 </div>
 </a>
-<a href="../commons/messages.html" title="Messages" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../commons/using-alarms.html" title="Using Alarms" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Messages
+Using Alarms
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
@@ -780,7 +780,7 @@ and
 </footer>
 
 </div>
-<script src="../assets/javascripts/application.5165553b.js"></script>
+<script src="../assets/javascripts/application.583bbe55.js"></script>
 <script src="../assets/javascripts/paradox-material-theme.js"></script>
 <script>app.initialize({version:"0.17",url:{base:"../."}})</script>
 <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
